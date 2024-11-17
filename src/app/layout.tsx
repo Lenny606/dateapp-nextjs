@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
+import type {Metadata} from "next";
+// import localFont from "next/font/local";
 import "./globals.css";
+import {Providers} from "@/components/Providers";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -14,22 +15,22 @@ import "./globals.css";
 // });
 
 export const metadata: Metadata = {
-  title: "Date App",
-  description: "Date App - NextJS practice project",
+    title: "Date App",
+    description: "Date App - NextJS practice project",
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
+                                       children,
+                                   }: Readonly<{
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+        <body>
+        <Providers>
+            {children}
+        </Providers>
+        </body>
+        </html>
+    );
 }
