@@ -1,7 +1,7 @@
-export const Messages = () => {
+export const Register = () => {
     return (
         <div>
-            Messages
+            Register
         </div>
     )
 }
