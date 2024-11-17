@@ -21,6 +21,7 @@ export default function LoginForm() {
         handleSubmit,
         formState: { isValid, errors },
     } = useForm<LoginSchema>({
+        //validation rules from lib
         resolver: zodResolver(loginSchema),
         mode: "onTouched",
     });
