@@ -49,9 +49,7 @@ export default function LoginForm() {
                             defaultValue=""
                             label="Email"
                             variant="bordered"
-                            {...register("email", {
-                                required: "Email is required"
-                            })}
+                            {...register("email")}
                             isInvalid={!!errors.email}
                             errorMessage={
                                 errors.email?.message as string
@@ -62,14 +60,7 @@ export default function LoginForm() {
                             label="Password"
                             variant="bordered"
                             type="password"
-                            {...register("password",{
-                                required: "Password is required",
-                                minLength: {
-                                    value: 8,
-                                    message:
-                                        "Password must be at least 8 characters long"
-                                }
-                            })}
+                            {...register("password")}
                             isInvalid={!!errors.password}
                             errorMessage={
                                 errors.password?.message as string
