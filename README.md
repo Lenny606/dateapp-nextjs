@@ -6,6 +6,8 @@
 - next ui library + framer motion + react icons
 - react hook form + resolvers
 - zod
+- next-auth
+- neon.tech postgres dtb
 
 
 ### install
@@ -16,3 +18,6 @@
 - npm i react-hook-form
 - npm install zod
 - npm install @hookform/resolvers
+- setup next auth:
+  https://authjs.dev/getting-started/adapters/prisma
+- npx prisma init
